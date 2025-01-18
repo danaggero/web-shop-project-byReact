@@ -36,17 +36,17 @@ function Header() {
       </div>
 
       {/* Header-middle */}
-      <div id="header-middle" className="flex mt-5 items-center">
+      <div id="header-middle" className="flex my-5 items-center">
         <div id="nav">
           <button className="ml-5 bg-transparent w-10 h-10 bg-[url('./assets/icons/menu.svg')] bg-no-repeat bg-cover cursor-pointer">
           </button> 
         </div>
         <ul className="flex gap-16 px-14">
-          <li className="cursor-pointer font-semibold">Home</li>
-          <li className="cursor-pointer font-semibold">Magazine</li>
-          <li className="cursor-pointer font-semibold">Services</li>
-          <li className="cursor-pointer font-semibold">Events</li>
-          <li className="cursor-pointer font-semibold">About Us</li>
+          <li className="cursor-pointer font-[650]">Home</li>
+          <li className="cursor-pointer font-[650]">Magazine</li>
+          <li className="cursor-pointer font-[650]">Services</li>
+          <li className="cursor-pointer font-[650]">Events</li>
+          <li className="cursor-pointer font-[650]">About Us</li>
         </ul>
         <div className="relative w-72 ml-5">
           <input
@@ -59,6 +59,18 @@ function Header() {
           </span>
         </div>
       </div>
+      
+      {/* Header-bottom */}
+      <div id="header-bottom" className="mt-6 ">
+        <ul className="flex list-none gap-14 pl-12 my-5">
+          <li className="font-libre text-3xl cursor-pointer">Best</li>
+          <li className="font-libre text-3xl cursor-pointer">Women</li>
+          <li className="font-libre text-3xl cursor-pointer">Men</li>
+          <li className="font-libre text-3xl cursor-pointer">Kid</li>
+          <li className="font-libre text-3xl cursor-pointer">Ranking</li>
+          <li className="font-libre text-3xl text-gray-500 cursor-pointer">Social</li>
+        </ul>
+    </div>
     </>
 
     
