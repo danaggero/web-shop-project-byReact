@@ -1,14 +1,19 @@
 import "./App.css"
-import Header from "./components/Header";
+import {Routes, Route, Link} from "react-router-dom"
+import Home from "./pages/Home";
+import Login from "./pages/Login";
 
 
 
-export default function App() {
-  return (
-    <div id="wrap" className="mx-auto w-[1280px] h-[1080px] bg-gray-100">
-      <Header />
-      {/* <Main /> */}
-      {/* <Footer /> */}
-    </div>
+function App() {
+  return ( 
+    <>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+    </>
   )
 }
+
+export default App;

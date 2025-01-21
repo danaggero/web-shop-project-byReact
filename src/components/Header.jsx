@@ -1,5 +1,7 @@
+import {Link} from "react-router-dom"
 
 function Header() {
+
   return (
     <>
       {/* Header-top */}
@@ -28,9 +30,7 @@ function Header() {
           </li>
           <li className="flex items-center gap-1">
             <span className="material-icons">login</span>
-            <a href="/login.html">
-              로그인
-            </a>
+            <Link to={"/login"}>로그인</Link>
           </li>
         </ul>
       </div>
@@ -63,11 +63,11 @@ function Header() {
       {/* Header-bottom */}
       <div id="header-bottom" className="mt-6 ">
         <ul className="flex list-none gap-14 pl-12 my-5">
-          <li className="font-libre text-3xl cursor-pointer">Best</li>
-          <li className="font-libre text-3xl cursor-pointer">Women</li>
-          <li className="font-libre text-3xl cursor-pointer">Men</li>
-          <li className="font-libre text-3xl cursor-pointer">Kid</li>
-          <li className="font-libre text-3xl cursor-pointer">Ranking</li>
+          <li className="font-libre text-3xl cursor-pointer font-semibold">Best</li>
+          <li className="font-libre text-3xl cursor-pointer font-semibold">Women</li>
+          <li className="font-libre text-3xl cursor-pointer font-semibold">Men</li>
+          <li className="font-libre text-3xl cursor-pointer font-semibold">Kid</li>
+          <li className="font-libre text-3xl cursor-pointer font-semibold">Ranking</li>
           <li className="font-libre text-3xl text-gray-500 cursor-pointer">Social</li>
         </ul>
     </div>
