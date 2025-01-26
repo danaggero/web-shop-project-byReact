@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 const Login = () => {
   return (
-    <div id="wrap" className="mx-auto w-[1280px] h-[1080px] bg-gray-100">
+    <div id="wrap" className="mx-auto w-[1280px] h-[1400px] bg-gray-100">
       <Header />
       <LoginForm />
       <Footer />

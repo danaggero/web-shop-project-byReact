@@ -1,10 +1,10 @@
-import kakaoLoginImg from "../assets/images/kakao_login_medium_narrow.png";
+import kakaoLoginImg from "../assets/images/kakao_login_medium_wide.png";
 
 function LoginForm() {
 
     return(
 
-        <div id="main" className="flex flex-col h-[600px] mx-[400px] my-[100px]">
+        <div id="main" className="flex flex-col h-[850px] mx-[400px] my-[100px]">
         <h2 id="login__title" className="mt-[100px] mb-[60px] text-2xl font-bold">로그인</h2>
         
         <form className="flex flex-col">
