@@ -19,3 +19,16 @@ export const deleteCartItem = async (id) => {
   const response = await axios.delete(`${BASE_URL}/cart/${id}`);
   return response.data;
 };
+
+export const addToCart = async (productId, size) => {
+    try {
+      const response = await axios.post(`${API_BASE_URL}/cart`, {
+        productId,
+        size,
+      });
+      return response.data; // 장바구니 추가 성공 여부
+    } catch (error) {
+      console.error("Failed to add to cart:", error);
+      throw error;
+    }
+  };
