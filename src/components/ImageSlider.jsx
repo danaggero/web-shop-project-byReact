@@ -11,9 +11,9 @@ const CustomPrevArrow = ({ onClick }) => (
   <button
     onClick={onClick}
     className="absolute top-1/2 left-5 z-10 transform -translate-y-1/2 p-6
-              transition duration-300 opacity-10 rounded-3xl hover:opacity-80"
+              transition duration-300 opacity-10 rounded-3xl hover:opacity-60"
   >
-  <span className="material-icons">
+  <span className="material-icons text-3xl">
 arrow_back_ios_new
 </span>
   </button>
@@ -24,9 +24,9 @@ const CustomNextArrow = ({ onClick }) => (
   <button
     onClick={onClick}
     className="absolute top-1/2 right-5 z-10 transform -translate-y-1/2 p-6
-              transition duration-300 opacity-10 rounded-3xl hover:opacity-80"
+              transition duration-300 opacity-10 rounded-3xl hover:opacity-60"
   >
-  <span className="material-icons">
+  <span className="material-icons text-3xl">
 arrow_forward_ios
 </span>
   </button>
@@ -47,7 +47,7 @@ const ImageSlider = () => {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full my-8 mb-12">
       <Slider {...settings}>
         <div>
           <img className="w-full h-[650px] object-cover object-top" 

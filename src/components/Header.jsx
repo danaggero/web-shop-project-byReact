@@ -64,11 +64,11 @@ function Header() {
     {/* Header-bottom */}
     <div id="header-bottom" className="mt-6 ">
       <ul className="flex list-none gap-14 pl-12 my-5">
-        <li className="font-libre text-3xl cursor-pointer font-semibold">Best</li>
-        <li className="font-libre text-3xl cursor-pointer font-semibold">Women</li>
-        <li className="font-libre text-3xl cursor-pointer font-semibold">Men</li>
-        <li className="font-libre text-3xl cursor-pointer font-semibold">Kid</li>
-        <li className="font-libre text-3xl cursor-pointer font-semibold">Ranking</li>
+        <li className="font-libre text-3xl cursor-pointer  font-semibold">Best</li>
+        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4">Women</li>
+        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4">Men</li>
+        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4">Kid</li>
+        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4">Ranking</li>
         <li className="font-libre text-3xl text-gray-500 cursor-pointer">Social</li>
       </ul>
     </div>
