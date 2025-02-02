@@ -25,9 +25,7 @@ function Header() {
         </li>
         <li className="flex items-center gap-1">
           <span className="material-icons">assignment</span>
-          <a href="#">
-            회원가입
-          </a>
+          <Link to={"/Register"}>회원가입</Link>
         </li>
         <li className="flex items-center gap-1">
           <span className="material-icons">login</span>
