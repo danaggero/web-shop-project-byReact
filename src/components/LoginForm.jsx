@@ -1,6 +1,55 @@
 import kakaoLoginImg from "../assets/images/kakao_login_medium_wide.png";
+import {useEffect, useState} from 'react';
+import dummy from "../assets/data/dummy.json"
 
 function LoginForm() {
+    
+        // const User = {
+        //     email: 'abc@naver.com',
+        //     password: 'study9999!',
+        // }
+        
+        const [email, setEmail] = useState('');
+        const [pw, setPw] = useState('');
+        const [emailValid, setEmailValid] = useState(false);
+        const [pwValid, setPwValid] = useState(false);
+        const [notAllow, setNotAllow] = useState(true);
+        
+        const handleEmail = (e) => {
+            setEmail(e.target.value);
+            const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if(regex.test(email)){
+                setEmailValid(true);
+            }else{
+                setEmailValid(false);
+            }
+        }
+        const handlePw = (e) => {
+            setPw(e.target.value);
+            const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+            if(regex.test(pw)){
+                setPwValid(true);
+            }else{
+                setPwValid(false);
+            }
+        }
+        const onClickConfirmButton = () => {
+            if(email === User.email && pw === User.password){
+                alert('로그인에 성공했습니다.')
+            }else {
+                alert('등록되지 않은 회원이거나 입력한 값이 일치하지 않습니다.')
+            }
+        }
+        
+        useEffect(()=>{
+            if(emailValid && pwValid){
+                setNotAllow(false);
+                return;
+            }
+        
+            setNotAllow(true);
+        
+        }, [emailValid, pwValid]);
 
     return(
 
@@ -9,10 +58,12 @@ function LoginForm() {
         
         <form className="flex flex-col">
             <label htmlFor="login-id" className="flex flex-col mb-[7px]">
-            <span className="text-[rgba(0,0,0,0.7)] mb-[7px]">아이디</span>
+            <span className="text-[rgba(0,0,0,0.7)] mb-[7px]">이메일</span>
             <input
                 id="login-id"
                 type="text"
+                value={email}
+                onChange={handleEmail}
                 className="text-2xl border-[rgba(0,0,0,0.7)] mt-[10px] focus:outline-none focus:border-black"
             />
             </label>
@@ -22,6 +73,8 @@ function LoginForm() {
             <input
                 id="login-password"
                 type="password"
+                value={pw}
+                onChange={handlePw}
                 className="text-2xl border-[rgba(0,0,0,0.7)] mt-[10px] focus:outline-none focus:border-black"
             />
             </label>
@@ -34,6 +87,8 @@ function LoginForm() {
             <input
             type="submit"
             value="로그인"
+            onClick={onClickConfirmButton}
+            disabled={notAllow} 
             className="bg-black text-white text-lg py-[10px] rounded-md border-none mb-[5px] cursor-pointer w-[384px] h-[57px] mx-auto"
             />
         </form>

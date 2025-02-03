@@ -60,7 +60,7 @@ function Header() {
     </div>
       
     {/* Header-bottom */}
-    <div id="header-bottom" className="mt-6 ">
+    <div id="header-bottom" className="mt-6 bottom-1">
       <ul className="flex list-none gap-14 pl-12 my-5">
         <li className="font-libre text-3xl cursor-pointer  font-semibold">Best</li>
         <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4">Women</li>

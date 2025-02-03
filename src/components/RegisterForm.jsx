@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function RegisterForm() {
   const [allChecked, setAllChecked] = useState(false);
@@ -31,19 +32,75 @@ function RegisterForm() {
     });
   };
 
+  const [email, setEmail] = useState('');
+  const [pw, setPw] = useState('');
+  const [emailValid, setEmailValid] = useState(false);
+  const [pwValid, setPwValid] = useState(false);
+  const [notAllow, setNotAllow] = useState(true);
+  const navigate = useNavigate();
+
+  // 이메일 입력 핸들러
+  const handleEmail = (e) => {
+      const value = e.target.value;
+      setEmail(value);
+      const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(regex.test(value)){
+        setEmailValid(true);
+    } else {
+        setEmailValid(false);
+    }
+};
+
+  // 비밀번호 입력 핸들러
+  const handlePw = (e) => {
+      const value = e.target.value;
+      setPw(value);
+      const regex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+      if(regex.test(value)){
+        setPwValid(true);
+      }else{
+        setPwValid(false);
+      }
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onClickConfirmButton();
+  };  
+
+  const onClickConfirmButton = (e) => {
+    alert('회원가입이 완료되었습니다.')
+    navigate('/');
+  };
+
+  // 입력 유효성에 따른 버튼 상태 업데이트
+  useEffect(() => {
+    if(emailValid && pwValid){
+        setNotAllow(false);
+        return;
+    }
+      setNotAllow(true);
+  }, [emailValid, pwValid]);
+
+
+
+
+
+
   return (
     <div id="main" className="flex flex-col h-[1200px] mx-[400px] my-[100px]">
       <h2 id="login__title" className="mt-[100px] mb-[60px] text-2xl font-bold">
         회원가입
       </h2>
 
-      <form className="flex flex-col">
+      <form className="flex flex-col onSubmit={handleSubmit}">
         {/* 이메일 입력 */}
         <label htmlFor="email-address" className="flex flex-col mb-[7px]">
           <span className="text-[rgba(0,0,0,0.7)] mb-[7px]">이메일주소</span>
           <input
             id="login-id"
             type="email"
+            value={email}
+            onChange={handleEmail}
             placeholder="example@email.com"
             className="text-2xl border-[rgba(0,0,0,0.7)] mt-[10px] focus:outline-none focus:border-black"
           />
