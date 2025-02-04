@@ -1,7 +1,8 @@
 import react, {useState, useEffect} from "react";
+import styles from './Asks.module.css';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import InquiryList from "../components/InquiryList";
 const Asks = () => {
     const [ currentTab, clickTab ] = useState("1:1 문의 홈")
@@ -9,14 +10,13 @@ const Asks = () => {
         clickTab(type);
     };
 
-    const history = useHistory();
+    const history = useNavigate();
 
     const handleButtonClick = () => {
         history.push("/write-inquiry");
     }; 
 
-    const [inquiries, setInquiries] = useState([]); 
-
+    const [inquiries, setInquiries] = useState([]);
     return (
         <div>
             <Header/>
@@ -56,3 +56,5 @@ const Asks = () => {
         </div>
     );
 }
+
+export default Asks;

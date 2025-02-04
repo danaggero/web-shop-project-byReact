@@ -3,6 +3,7 @@ import CategoryFilter from "../components/CategoryFilter";
 import Footer from "../components/Footer";
 import ItemCard from "../components/ItemCard";
 import { useEffect, useState } from "react";
+import useItems from "../hooks/useItems";
 
 const Events = () => {
     const [ category, setCategory] = useState("ALL");
