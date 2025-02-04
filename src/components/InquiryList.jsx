@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { useState, useEffect} from "react";
 
 const InquiryList = () => {
@@ -40,3 +40,5 @@ const InquiryList = () => {
         </div>
     );
 };
+
+export default InquiryList;
