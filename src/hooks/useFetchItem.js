@@ -21,13 +21,6 @@ const useFetchItem = () => {
     }, []);
     return { item, isLoading, error};
 
-    useEffect(() => {
-        if (category === "ALL") {
-            setFilteredItems(items);
-        } else {
-            setFilteredItems(items.filter((item) => item.category === category));
-        }
-    }, [category, items]);
 };
 
 export default useFetchItem;

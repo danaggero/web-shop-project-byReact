@@ -3,7 +3,7 @@ import ProductImage from "../components/products/ProductImage";
 import ProductInfo from "../components/products/ProductInfo";
 import PurchaseActions from "../components/products/PurchaseActions";
 import ProductDetails from "../components/products/ProductDetails";
-import useProductData from "../../hooks/useProductData";
+//import useProductData from "../../hooks/useProductData";
 
 const ProductDetailPage = ({ productId }) => {
   const { product, sizeInfo, isLoading, error } = useProductData(productId);

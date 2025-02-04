@@ -9,3 +9,5 @@ export const FetchItem = async () => {
         throw error;
     }
 }
+
+export default FetchItem;
