@@ -49,11 +49,11 @@ const CategoryFilter = () => {
             style={{
               margin: "5px",
               padding: "10px 15px",
-              border: "1px solid #ccc",
-              borderRadius: "5px",
               background: selectedCategory === category ? "#000" : "#fff",
               color: selectedCategory === category ? "#fff" : "#000",
               cursor: "pointer",
+              border: "none",
+              outline: "none",
             }}
           >
             {category}

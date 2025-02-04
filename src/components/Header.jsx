@@ -1,6 +1,9 @@
 import {Link} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+
+  const Navigate = useNavigate();
 
   return (
   <div id="header">
@@ -41,10 +44,10 @@ function Header() {
         </button> 
       </div>
       <ul className="flex gap-16 px-14">
-        <li className="cursor-pointer font-[650]">Home</li>
+        <li className="cursor-pointer font-[650]" onClick={() => Navigate("/")}>Home</li>
         <li className="cursor-pointer font-[650]">Magazine</li>
-        <li className="cursor-pointer font-[650]">Services</li>
-        <li className="cursor-pointer font-[650]">Events</li>
+        <li className="cursor-pointer font-[650]" onClick={() => Navigate("/asks")}>Services</li>
+        <li className="cursor-pointer font-[650]" onClick={() => Navigate("/events")}>Events</li>
         <li className="cursor-pointer font-[650]">About Us</li>
       </ul>
       <div className="relative w-72 ml-5">
