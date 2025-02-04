@@ -16,3 +16,31 @@
 .active {
     border-bottom: 2px solid brown;
 }
+
+.inquiry {
+    font-size: 30px;
+    margin-Top : 100px;
+    margin-left : 50px;
+    font-weight: bold;
+}
+
+.inquiry2 {
+    font-size: 20px;
+    margin-left : 50px;
+}
+
+.inquiry3 {
+    font-size: 20px;
+    margin-top: 250px;
+    margin-left : 50px;
+}
+
+.button3 {
+    margin-left: 50px;
+    background-color: black;
+    color: azure;
+    width: 130px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}

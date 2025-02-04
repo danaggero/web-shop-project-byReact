@@ -10,10 +10,10 @@ const Asks = () => {
         clickTab(type);
     };
 
-    const history = useNavigate();
+    const navigate = useNavigate();
 
     const handleButtonClick = () => {
-        history.push("/write-inquiry");
+        navigate("/asks/write");
     }; 
 
     const [inquiries, setInquiries] = useState([]);
@@ -34,10 +34,10 @@ const Asks = () => {
             <div>
                 {currentTab === "1:1 문의 홈" && (
                     <div>
-                        <h2>문의 유형 선택</h2>
-                        <p>문의 유형을 선택해 주세요. 고객센터 상담보다 더 빠르게 해결할 수 있습니다.</p>
-                        <h3>찾으시는 내용이 없나요?</h3>
-                        <button onClick={handleButtonClick}>1:1 문의 쓰기</button>
+                        <h2 className={styles.inquiry}>문의 유형 선택</h2>
+                        <p className={styles.inquiry2}>문의 유형을 선택해 주세요. 고객센터 상담보다 더 빠르게 해결할 수 있습니다.</p>
+                        <h3 className={styles.inquiry3}>찾으시는 내용이 없나요?</h3>
+                        <button onClick={handleButtonClick} className={styles.button3}>1:1 문의 쓰기</button>
                     </div>
                 )}
                 {currentTab === "1:1 문의 내역" && (
