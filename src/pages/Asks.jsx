@@ -1,4 +1,5 @@
 import react, {useState, useEffect} from "react";
+import styles from './Asks.module.css';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
@@ -15,8 +16,7 @@ const Asks = () => {
         history.push("/write-inquiry");
     }; 
 
-    const [inquiries, setInquiries] = useState([]); 
-
+    const [inquiries, setInquiries] = useState([]);
     return (
         <div>
             <Header/>
