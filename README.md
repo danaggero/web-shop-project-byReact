@@ -1,8 +1,30 @@
-# React + Vite
+# 1차로 일단 만들어야 할 페이지
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- 로그인 []
+- 회원가입 []
+  - 구글 로그인 [] -> 연습삼아 만들어보는 것도 좋을 듯
+  - 카카오 로그인 [] -> 연습삼아 만들어보는 것도 좋을 듯
+- 장바구니 []
+- 마이페이지 []
+- 제품 상세 페이지 []
+- 메인 []
 
-Currently, two official plugins are available:
+# 업무분담
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[혜서]
+
+- 로그인 -> 카카오 로그인
+- 마이페이지
+- 제품 상세 페이지
+
+[지원]
+
+- 로그인 -> 구글 로그인
+- 회원가입
+- 메인페이지
+
+[공부해야할 것]
+
+- 라우팅 react (네비게이션)
+- 목데이터 넣는 방법
+- react 컴포넌트 공부해오기

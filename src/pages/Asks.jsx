@@ -1,7 +1,8 @@
 import react, {useState, useEffect} from "react";
+import styles from './Asks.module.css';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import InquiryList from "../components/InquiryList";
 const Asks = () => {
     const [ currentTab, clickTab ] = useState("1:1 문의 홈")
@@ -9,24 +10,25 @@ const Asks = () => {
         clickTab(type);
     };
 
-    const history = useHistory();
+    const history = useNavigate();
 
     const handleButtonClick = () => {
         history.push("/write-inquiry");
     }; 
 
-    const [inquiries, setInquiries] = useState([]); 
-
+    const [inquiries, setInquiries] = useState([]);
     return (
         <div>
             <Header/>
-            <div className={`${styles.tab} ${currentTab === "1:1 문의 홈" ? styles.focused : ''}`}
-                 onClick={() => selectMenuHandler("1:1 문의 홈")}>
-                <span>1:1 문의 홈</span>
-            </div>
-            <div className={`${styles.tab} ${currentTab === "1:1 문의 내역" ? styles.focused : ''}`}
-                    onClick={() => selectMenuHandler("1:1 문의 내역")}>
-                        <span>1:1 문의 내역</span>
+            <div className={styles.tab}>
+                <div className={`${styles['tab-item']} ${currentTab === "1:1 문의 홈" ? styles.active : ''}`}
+                     onClick={() => selectMenuHandler("1:1 문의 홈")}>
+                    <span>1:1 문의 홈</span>
+                </div>
+                <div className={`${styles['tab-item']} ${currentTab === "1:1 문의 내역" ? styles.active : ''}`}
+                     onClick={() => selectMenuHandler("1:1 문의 내역")}>
+                    <span>1:1 문의 내역</span>
+                </div>
             </div>
 
             <div>
@@ -56,3 +58,5 @@ const Asks = () => {
         </div>
     );
 }
+
+export default Asks;
