@@ -3,11 +3,6 @@ import {useEffect, useState} from 'react';
 import dummy from "../assets/data/dummy.json"
 
 function LoginForm() {
-    
-        // const User = {
-        //     email: 'abc@naver.com',
-        //     password: 'study9999!',
-        // }
         
         const [email, setEmail] = useState('');
         const [pw, setPw] = useState('');
@@ -34,7 +29,7 @@ function LoginForm() {
             }
         }
         const onClickConfirmButton = () => {
-            if(email === User.email && pw === User.password){
+            if(email === dummy.email && pw === dummy.password){
                 alert('로그인에 성공했습니다.')
             }else {
                 alert('등록되지 않은 회원이거나 입력한 값이 일치하지 않습니다.')
