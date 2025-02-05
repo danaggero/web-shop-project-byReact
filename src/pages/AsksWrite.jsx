@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import styles from './AsksWrite.module.css';
 
 const AsksWrite = () => {
     const [formData, setFormData] = useState({
@@ -35,7 +36,7 @@ const AsksWrite = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={styles.Container}>
             <div>
                 <label>문의 유형:</label>
                 <input type="text" name="inquiryType" value={formData.inquiryType} onChange={handleChange} />
