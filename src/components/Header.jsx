@@ -16,9 +16,7 @@ function Header() {
       <ul className="flex list-none gap-5">
         <li className="flex items-center gap-1">
           <span className="material-icons">shopping_cart</span>
-          <a href="#">
-            장바구니
-          </a>
+          <Link to={"/cart"}>장바구니</Link>
         </li>
         <li className="flex items-center gap-1">
           <span className="material-icons">account_circle</span>

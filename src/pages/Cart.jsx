@@ -12,6 +12,7 @@ const Cart = () => {
   }
 
   if (error) {
+    //이거 API연결 안해놨을 때 
     return <div className="text-center mt-20">데이터를 불러오는 중 오류가 발생했습니다.</div>;
   }
 
