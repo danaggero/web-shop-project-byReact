@@ -46,7 +46,7 @@ function Header() {
         <li className="cursor-pointer font-[650]">Magazine</li>
         <li className="cursor-pointer font-[650]" onClick={() => Navigate("/asks")}>Services</li>
         <li className="cursor-pointer font-[650]" onClick={() => Navigate("/events")}>Events</li>
-        <li className="cursor-pointer font-[650]">About Us</li>
+        <li className="cursor-pointer font-[650]" onClick={() => Navigate("/NotFound")}>About Us</li>
       </ul>
       <div className="relative w-72 ml-5">
         <input
