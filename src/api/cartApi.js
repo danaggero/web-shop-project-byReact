@@ -22,7 +22,7 @@ export const deleteCartItem = async (id) => {
 
 export const addToCart = async (productId, size) => {
     try {
-      const response = await axios.post(`${API_BASE_URL}/cart`, {
+      const response = await axios.post(`${BASE_URL}/cart`, {
         productId,
         size,
       });

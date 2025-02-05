@@ -1,19 +1,39 @@
+import Card from "./products/MainProduct";
+const mockData = [
+    {
+        title: "Etiam Nulla Lectus Amet Nunc Molestie At Vulputate.",
+        subtitle: "Facilisi Viverra Dictum Augue Eu Lobortis Elit. In Et Donec Habitasse Lacus Mi Commodo Elementum."
+    },
+    {
+        title: "Curabitur Non Nulla Sit Amet Nisl Tempus Convallis Quis Ac Lectus.",
+        subtitle: "Vivamus Magna Justo, Lacinia Eget Congue Vel, Convallis At Tellus."
+    },
+    {
+        title: "Pellentesque In Ipsum Id Orci Porta Dapibus.",
+        subtitle: "Curabitur Aliquet Quam Id Duis Bibendum. Vivamus Suscipit Tortor Eget Felis Porttitor."
+    },
+    {
+        title: "Nulla Quis Lorem Ut Libero Malesuada Feugiat.",
+        subtitle: "Sed Porttitor Lectus Nibh. Curabitur Non Nulla Sit Amet Nisl Tempus Convallis."
+    },
+    {
+        title: "Donec Sollicitudin Molestie Malesuada.",
+        subtitle: "Curabitur Non Nulla Sit Amet Nisl Tempus Convallis Quis Ac Lectus."
+    },
+    {
+        title: "Vestibulum Ac Diam Sit Amet Quam Vehicula Elementum.",
+        subtitle: "Nulla Quis Lorem Ut Libero Malesuada Feugiat. Sed Porttitor Lectus Nibh."
+    }
+];
+
 function Main() {
-
-    return(
-        <div id="main" className="flex-col py-4 px-6 w-[1280px] h-[1400px] bg-gray-200">
-            <div className="grid grid-cols-3 grid-rows-2 gap-10 h-[1000px]">
-                <div className="bg-slate-400">상품1</div>
-                <div className="bg-slate-400">상품2</div>
-                <div className="bg-slate-400">상품3</div>
-                <div className="bg-slate-400">상품4</div>
-                <div className="bg-slate-400">상품5</div>
-                <div className="bg-slate-400">상품6</div>
-
-            </div>
-
+    return (
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "20px", padding: "20px" }}>
+            {mockData.map((data, index) => (
+                <Card key={index} title={data.title} subtitle={data.subtitle} />
+            ))}
         </div>
-    )
-  }
-  
-  export default Main;
+    );
+}
+
+export default Main;
