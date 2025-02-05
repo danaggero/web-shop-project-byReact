@@ -44,8 +44,8 @@ const Asks = () => {
                     <div>
                         {inquiries.length === 0 ? (
                             <div>
-                                <h5>문의하신 내역이 없습니다.</h5>
-                                <p>이전 문의 보러가기</p>
+                                <h5 className={styles.내역없음}>문의하신 내역이 없습니다.</h5>
+                                <p className={styles.이전문의}>이전 문의 보러가기</p>
                             </div>
                         ) : (
                             <InquiryList inquiries={inquiries} />

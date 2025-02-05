@@ -44,3 +44,18 @@
     border-radius: 10px;
     margin-bottom: 100px;
 }
+
+.내역없음 {
+    margin-top: 100px;
+    margin-left: 150px;
+    margin-bottom: 400px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.이전문의 {
+    text-align: right;
+    padding-right: 200px;
+    margin-bottom: 250px;
+}
