@@ -6,7 +6,7 @@ function Header() {
   const Navigate = useNavigate();
 
   return (
-  <div id="header">
+  <div id="header border-t border-gray-300">
 
     {/* Header-top */}
     <div id="header-top" className="bg-beige flex justify-between items-center p-5 mt-5">
@@ -36,19 +36,19 @@ function Header() {
     </div>
 
     {/* Header-middle */}
-    <div id="header-middle" className="flex my-5 items-center">
+    <div id="header-middle" className="flex my-5 items-center w-full">
       <div id="nav">
         <button className="ml-5 bg-transparent w-10 h-10 bg-[url('./assets/icons/menu.svg')] bg-no-repeat bg-cover cursor-pointer">
         </button> 
       </div>
-      <ul className="flex gap-16 px-14">
-        <li className="cursor-pointer font-[650]" onClick={() => Navigate("/")}>Home</li>
-        <li className="cursor-pointer font-[650]">Magazine</li>
-        <li className="cursor-pointer font-[650]" onClick={() => Navigate("/asks")}>Services</li>
-        <li className="cursor-pointer font-[650]" onClick={() => Navigate("/events")}>Events</li>
-        <li className="cursor-pointer font-[650]" onClick={() => Navigate("/NotFound")}>About Us</li>
+      <ul className="flex gap-16 px-14 w-full">
+        <li className="cursor-pointer font-[650] w-full" onClick={() => Navigate("/")}>Home</li>
+        <li className="cursor-pointer font-[650] w-full" onClick={() => Navigate("/NotFound")}>Magazine</li>
+        <li className="cursor-pointer font-[650] w-full" onClick={() => Navigate("/asks")}>Services</li>
+        <li className="cursor-pointer font-[650] w-full" onClick={() => Navigate("/events")}>Events</li>
+        <li className="cursor-pointer font-[650] w-full" onClick={() => Navigate("/NotFound")}>About Us</li>
       </ul>
-      <div className="relative w-72 ml-5">
+      <div className="relative w-72 ml-5 w-full">
         <input
           type="text"
           placeholder="검색어를 입력하세요"
@@ -63,12 +63,12 @@ function Header() {
     {/* Header-bottom */}
     <div id="header-bottom" className="mt-6 bottom-1">
       <ul className="flex list-none gap-14 pl-12 my-5">
-        <li className="font-libre text-3xl cursor-pointer  font-semibold">Best</li>
-        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4">Women</li>
-        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4">Men</li>
-        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4">Kid</li>
-        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4">Ranking</li>
-        <li className="font-libre text-3xl text-gray-500 cursor-pointer">Social</li>
+        <li className="font-libre text-3xl cursor-pointer  font-semibold w-full">Best</li>
+        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4 w-full">Women</li>
+        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4 w-full">Men</li>
+        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4 w-full">Kid</li>
+        <li className="font-libre text-3xl cursor-pointer font-semibold hover:underline hover:underline-offset-4 w-full">Ranking</li>
+        <li className="font-libre text-3xl text-gray-500 cursor-pointer w-full">Social</li>
       </ul>
     </div>
   </div>
