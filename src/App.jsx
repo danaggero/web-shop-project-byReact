@@ -8,6 +8,8 @@ import Events from "./pages/Event";
 import Cart from "./pages/Cart";  
 import Asks from "./pages/Asks";
 import AsksWrite from "./pages/AsksWrite";
+import MyPageForm from "./components/MyPageForm";
+import MyPage from "./pages/MyPage";
 
 function App() {
   return ( 
@@ -16,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/mypage" element={<MyPage />} />
         <Route path="/NotFound" element={<NotFound/>}/>
         <Route path="/product/:productId" element={<ProductDetailPage />} />
         <Route path="/events" element={<Events />} />

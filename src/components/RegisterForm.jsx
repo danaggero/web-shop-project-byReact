@@ -84,61 +84,88 @@ function RegisterForm() {
 
 
 
-
-
   return (
-    <div id="main" className="flex flex-col h-[1200px] mx-[400px] my-[100px]">
+    <div id="main" className="flex flex-col h-[1400px] mx-[400px] mt-[100px]">
       <h2 id="login__title" className="mt-[100px] mb-[60px] text-2xl font-bold">
         회원가입
       </h2>
 
-      <form className="flex flex-col onSubmit={handleSubmit}">
+      <form className="flex flex-col" onSubmit={handleSubmit}>
         {/* 이메일 입력 */}
         <label htmlFor="email-address" className="flex flex-col mb-[7px]">
-          <span className="text-[rgba(0,0,0,0.7)] mb-[7px]">이메일주소</span>
+          <span className="text-[rgba(0,0,0,0.7)] font-semibold mb-[7px]">이메일주소</span>
           <input
             id="login-id"
             type="email"
             value={email}
             onChange={handleEmail}
             placeholder="example@email.com"
-            className="text-2xl border-[rgba(0,0,0,0.7)] mt-[10px] focus:outline-none focus:border-black"
+            className="text-2xl border-[rgba(0,0,0,0.7)] mb-[10px] focus:outline-none focus:border-black"
+          />
+        </label>
+        {/* 이름 입력 */}
+        <label htmlFor="register-username" className="flex flex-col mb-[7px]">
+          <span className="text-[rgba(0,0,0,0.7)] font-semibold mb-[7px]">이름</span>
+          <input
+            id="login-username"
+            type="username"
+            placeholder="이름을 입력하세요"
+            className="text-2xl border-[rgba(0,0,0,0.7)] mb-[10px] focus:outline-none focus:border-black"
           />
         </label>
 
+        {/* 닉네임 입력 */}
+        <label htmlFor="register-nickname" className="flex flex-col mb-[7px]">
+          <span className="text-[rgba(0,0,0,0.7)] font-semibold mb-[7px]">닉네임</span>
+          <input
+            id="login-nickname"
+            type="nickname"
+            placeholder="닉네임을 입력하세요"
+            className="text-2xl border-[rgba(0,0,0,0.7)] mb-[10px] focus:outline-none focus:border-black"
+          />
+        </label>
+        
+
         {/* 비밀번호 입력 */}
         <label htmlFor="register-password" className="flex flex-col mb-[7px]">
-          <span className="text-[rgba(0,0,0,0.7)] mb-[7px]">비밀번호</span>
+          <span className="text-[rgba(0,0,0,0.7)] font-semibold mb-[7px]">비밀번호</span>
           <input
             id="login-password"
             type="password"
             placeholder="비밀번호를 입력하세요"
-            className="text-2xl border-[rgba(0,0,0,0.7)] mt-[10px] focus:outline-none focus:border-black"
+            className="text-2xl border-[rgba(0,0,0,0.7)] mb-[10px] focus:outline-none focus:border-black"
           />
         </label>
 
         {/* 전화번호 입력 */}
         <label htmlFor="phone-number" className="flex flex-col mb-[7px]">
-          <span className="text-[rgba(0,0,0,0.7)] mb-[7px]">전화번호</span>
+          <span className="text-[rgba(0,0,0,0.7)] font-semibold mb-[7px]">전화번호</span>
           <input
             id="phone-number"
             type="tel"
-            className="text-2xl border-[rgba(0,0,0,0.7)] mt-[10px] focus:outline-none focus:border-black"
+            placeholder="전화번호를 '-'를 제외하고 입력하세요"
+
+            className="text-2xl border-[rgba(0,0,0,0.7)] mb-[10px] focus:outline-none focus:border-black"
           />
         </label>
 
         {/* 주소 입력 */}
-        <label htmlFor="address" className="flex flex-col mb-[7px]">
+        <label htmlFor="address" className="flex flex-col font-semibold mb-[7px]">
           <span className="text-[rgba(0,0,0,0.7)] mb-[7px]">주소</span>
           <input
             id="address"
             type="text"
-            className="text-2xl border-[rgba(0,0,0,0.7)] mt-[10px] focus:outline-none focus:border-black"
+            className="text-2xl border-[rgba(0,0,0,0.7)] mb-1 focus:outline-none focus:border-black"
+          />
+          <input
+            id="specific-address"
+            type="text"
+            className="text-2xl border-[rgba(0,0,0,0.7)] mb-[10px] focus:outline-none focus:border-black"
           />
         </label>
 
         {/* 이용약관 */}
-        <div id="이용약관" className="flex flex-col h-[350px] bg-slate-100 my-10 text-[rgba(0,0,0,0.9)]">
+        <div id="이용약관" className="flex flex-col h-[300px] bg-slate-100 my-10 font-bold text-[rgba(0,0,0,0.9)]">
           <div className="h-20 flex items-center">
             <input
               className="w-[20px] h-[20px] mr-2"

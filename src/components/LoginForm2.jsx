@@ -1,7 +1,7 @@
 import kakaoLoginImg from "../assets/images/kakao_login_medium_wide.png";
 import { useEffect, useState } from 'react';
 import User from "../assets/data/dummy.json"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 function LoginForm2() {
@@ -15,6 +15,7 @@ function LoginForm2() {
     const [emailValid, setEmailValid] = useState(false);
     const [pwValid, setPwValid] = useState(false);
     const [notAllow, setNotAllow] = useState(true);
+    const navigate = useNavigate();
 
     // 이메일 입력 핸들러
     const handleEmail = (e) => {
@@ -39,6 +40,7 @@ function LoginForm2() {
 
         if (user) {
             alert('로그인에 성공했습니다.');
+            navigate('/');
         } else {
             alert('등록되지 않은 회원이거나 입력한 값이 일치하지 않습니다.');
         }

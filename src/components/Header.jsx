@@ -20,9 +20,7 @@ function Header() {
         </li>
         <li className="flex items-center gap-1">
           <span className="material-icons">account_circle</span>
-          <a href="#">
-            마이페이지
-          </a>
+          <Link to={"/mypage"}>마이페이지</Link>
         </li>
         <li className="flex items-center gap-1">
           <span className="material-icons">assignment</span>
