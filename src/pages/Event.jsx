@@ -2,7 +2,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ItemCard from "../components/ItemCard";
 import { useState } from "react";
-import useFetchItems from "../hooks/useFetchItems";
+import useFetchItems from "../hooks/useFetchItem";
 
 const Events = () => {
     const [category, setCategory] = useState("ALL");
@@ -17,11 +17,15 @@ const Events = () => {
     }
 
     return (
-        <div id="wrap" className="mx-auto w-[1280px] h-[1080px] bg-gray-100">
-            <Header />
-            <ItemCard items={filteredItems} />
-            <Footer />
+      <div id="wrap" className="mx-auto w-[1280px] h-[1080px] bg-gray-100">
+      <Header />
+        <div className="grid grid-cols-3 gap-4">
+          {filteredItems.map((item) => (
+            <ItemCard key={item.id} item={item} /> // item={item}으로 전달
+          ))}
         </div>
+      <Footer />
+    </div>
     );
 };
 
