@@ -2,13 +2,9 @@ import kakaoLoginImg from "../assets/images/kakao_login_medium_wide.png";
 import { useEffect, useState } from 'react';
 import User from "../assets/data/dummy.json"
 import { Link, useNavigate } from "react-router-dom";
-
+import useAuthStore from "../store/authStore";
 
 function LoginForm2() {
-    // const User = {
-    //     email: 'abc@naver.com',
-    //     password: 'study9999!',
-    // };
 
     const [email, setEmail] = useState('');
     const [pw, setPw] = useState('');
@@ -16,6 +12,7 @@ function LoginForm2() {
     const [pwValid, setPwValid] = useState(false);
     const [notAllow, setNotAllow] = useState(true);
     const navigate = useNavigate();
+    const {login,isLoggedIn} = useAuthStore();
 
     // 이메일 입력 핸들러
     const handleEmail = (e) => {
@@ -40,6 +37,8 @@ function LoginForm2() {
 
         if (user) {
             alert('로그인에 성공했습니다.');
+            login();
+            // console.log("로그인 성공")
             navigate('/');
         } else {
             alert('등록되지 않은 회원이거나 입력한 값이 일치하지 않습니다.');

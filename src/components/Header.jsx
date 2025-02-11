@@ -1,17 +1,21 @@
 import {Link} from "react-router-dom"
 import { useNavigate } from "react-router-dom";
+import useAuthStore from "../store/authStore";
 
 function Header() {
 
   const Navigate = useNavigate();
+  const {isLoggedIn, logout, login} = useAuthStore();
+  console.log('현재 로그인 상태:', isLoggedIn);
 
   return (
+    
   <div id="header border-t border-gray-300">
 
     {/* Header-top */}
-    <div id="header-top" className="bg-beige flex justify-between items-center p-5 mt-5">
-      <div id="logo" className="text-3xl font-extrabold">
-      <Link to={"/"}>LOGO</Link>
+    <div id="header-top" className="bg-[#708090] flex justify-between items-center p-5 mt-5">
+      <div id="logo" className="text-[white] text-3xl font-extrabold">
+      <Link to={"/"}>ECLO</Link>
       </div>
       <ul className="flex list-none gap-5">
         <li className="flex items-center gap-1">
@@ -27,14 +31,24 @@ function Header() {
           <Link to={"/Register"}>회원가입</Link>
         </li>
         <li className="flex items-center gap-1">
-          <span className="material-icons">login</span>
-          <Link to={"/login"}>로그인</Link>
+          {
+            isLoggedIn ? 
+            <>
+            <span className="material-icons">logout</span>
+            <div className="cursor-pointer" onClick={()=>{logout(); alert('로그아웃 되었습니다.')}}>로그아웃</div>
+            </>
+            :
+            <>
+            <span className="material-icons">login</span>
+            <Link to={"/login"}>로그인</Link>
+            </>
+          }
         </li>
       </ul>
     </div>
 
     {/* Header-middle */}
-    <div id="header-middle" className="flex my-5 items-center w-full">
+    <div id="header-middle" className="flex my-5 items-center">
       <div id="nav">
         <button className="ml-5 bg-transparent w-10 h-10 bg-[url('./assets/icons/menu.svg')] bg-no-repeat bg-cover cursor-pointer">
         </button> 
