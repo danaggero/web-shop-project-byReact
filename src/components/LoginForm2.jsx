@@ -1,4 +1,4 @@
-import kakaoLoginImg from "../assets/images/kakao_login_medium_wide.png";
+
 import { useEffect, useState } from 'react';
 import User from "../assets/data/dummy.json"
 import { Link, useNavigate } from "react-router-dom";
