@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import User from "../assets/data/dummy.json"
 import { Link, useNavigate } from "react-router-dom";
 import useAuthStore from "../store/authStore";
+import KakaoLoginButton from "./KakaoLogin";
 
 function LoginForm2() {
 
@@ -92,9 +93,7 @@ function LoginForm2() {
                 />
             </form>
 
-            <button className="w-full max-w-sm mx-auto mt-2 rounded-md overflow-hidden">
-                <img className="w-full h-auto" src={kakaoLoginImg} alt="카카오 로그인" />
-            </button>
+            <KakaoLoginButton />
         </div>
     );
 }

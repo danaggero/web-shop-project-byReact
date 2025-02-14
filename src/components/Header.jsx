@@ -60,7 +60,7 @@ function Header() {
         <li className="cursor-pointer font-[650] w-full" onClick={() => Navigate("/events")}>Events</li>
         <li className="cursor-pointer font-[650] w-full" onClick={() => Navigate("/NotFound")}>About Us</li>
       </ul>
-      <div className="relative w-72 ml-5 w-full">
+      <div className="relative w-72 ml-5">
         <input
           type="text"
           placeholder="검색어를 입력하세요"
