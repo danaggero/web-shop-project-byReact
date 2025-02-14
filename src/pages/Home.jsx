@@ -6,7 +6,7 @@ import useAuthStore from "../store/authStore";
 
 const Home = () => {
   return (
-    <div id="wrap" className="mx-auto w-full h-[1400px] bg-gray-100">
+    <div id="wrap" className="mx-auto w-full h-[1400px] ">
       <Header />
       <ImageSlider />
       <Main />

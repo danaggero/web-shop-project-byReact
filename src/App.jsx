@@ -10,6 +10,7 @@ import Cart from "./pages/Cart";
 import Asks from "./pages/Asks";
 import AsksWrite from "./pages/AsksWrite";
 import MyPage from "./pages/MyPage";
+import KakaoRedirect from "./pages/KakaoRedirect";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/asks" element={<Asks />} />
         <Route path="/asks/write" element={<AsksWrite />} />
+        <Route path="/kakao" element={<KakaoRedirect />} />
       </Routes>
     </>
   )
