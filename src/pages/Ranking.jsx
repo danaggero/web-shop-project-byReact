@@ -16,7 +16,7 @@ export default function RankingPage() {
 
   const filteredItems = dummyItems
     .filter((item) => category === "전체" || item.category === category)
-    .sort((a, b) => a.rank - b.rank); // 랭킹 순 정렬
+    .sort((a, b) => a.rank - b.rank); 
 
   return (
     <div className="max-w-4xl mx-auto p-4">
