@@ -16,3 +16,46 @@
 .active {
     border-bottom: 2px solid brown;
 }
+
+.inquiry {
+    font-size: 30px;
+    margin-Top : 100px;
+    margin-left : 50px;
+    font-weight: bold;
+}
+
+.inquiry2 {
+    font-size: 20px;
+    margin-left : 50px;
+}
+
+.inquiry3 {
+    font-size: 20px;
+    margin-top: 250px;
+    margin-left : 50px;
+}
+
+.button3 {
+    margin-left: 50px;
+    background-color: black;
+    color: azure;
+    width: 130px;
+    height: 35px;
+    border-radius: 10px;
+    margin-bottom: 100px;
+}
+
+.내역없음 {
+    margin-top: 100px;
+    margin-left: 150px;
+    margin-bottom: 400px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.이전문의 {
+    text-align: right;
+    padding-right: 200px;
+    margin-bottom: 250px;
+}
