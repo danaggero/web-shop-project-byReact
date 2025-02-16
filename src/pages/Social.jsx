@@ -2,15 +2,16 @@ import { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Loader2 } from "lucide-react";
+import Dummy from "../assets/images/clothes.png"
 
 const categories = ["전체", "봄", "여름", "가을", "겨울"];
 const dummyData = [
-  { id: 1, image: "/images/outfit1.jpg", title: "캐주얼 데님 스타일" },
-  { id: 2, image: "/images/outfit2.jpg", title: "편안한 후드 셋업" },
-  { id: 3, image: "/images/outfit3.jpg", title: "세련된 스트릿 패션" },
-  { id: 4, image: "/images/outfit4.jpg", title: "모던한 겨울룩" },
-  { id: 5, image: "/images/outfit5.jpg", title: "트렌디한 가을 코디" },
-  { id: 6, image: "/images/outfit6.jpg", title: "스포티한 데일리룩" },
+  { id: 1, image: {Dummy}, title: "캐주얼 데님 스타일" },
+  { id: 2, image: {Dummy}, title: "편안한 후드 셋업" },
+  { id: 3, image: {Dummy}, title: "세련된 스트릿 패션" },
+  { id: 4, image: {Dummy}, title: "모던한 겨울룩" },
+  { id: 5, image: {Dummy}, title: "트렌디한 가을 코디" },
+  { id: 6, image: {Dummy}, title: "스포티한 데일리룩" },
 ];
 
 export default function FashionFeed() {
