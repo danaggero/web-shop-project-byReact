@@ -57,7 +57,7 @@ function Header() {
           <li className="cursor-pointer font-[650] inline-block" onClick={() => Navigate("/NotFound")}>Magazine</li>
           <li className="cursor-pointer font-[650] inline-block" onClick={() => Navigate("/asks")}>Services</li>
           <li className="cursor-pointer font-[650] inline-block" onClick={() => Navigate("/events")}>Events</li>
-          <li className="cursor-pointer font-[650] inline-block" onClick={() => Navigate("/NotFound")}>About Us</li>
+          <li className="cursor-pointer font-[650] inline-block" onClick={() => Navigate("/about")}>About Us</li>
         </ul>
       </div>
       <div className="relative w-72 mx-5">
