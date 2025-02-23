@@ -6,10 +6,12 @@ import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
 import ProductDetailPage from "./pages/ProductDetail";
 import Events from "./pages/Event";
+import AboutUs from "./pages/AboutUs";
 import Cart from "./pages/Cart";  
 import Asks from "./pages/Asks";
 import AsksWrite from "./pages/AsksWrite";
 import MyPage from "./pages/MyPage";
+import KakaoRedirect from "./pages/KakaoRedirect";
 
 
 function App() {
@@ -25,9 +27,11 @@ function App() {
         <Route path="/NotFound" element={<NotFound/>}/>
         <Route path="/product/:productId" element={<ProductDetailPage />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/asks" element={<Asks />} />
         <Route path="/asks/write" element={<AsksWrite />} />
+        <Route path="/kakao" element={<KakaoRedirect />} />
       </Routes>
     </>
   )
