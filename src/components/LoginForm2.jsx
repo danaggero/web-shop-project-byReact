@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from 'react';
-import User from "../assets/data/dummy.json"
+import users from "../assets/data/dummy.json"
 import { Link, useNavigate } from "react-router-dom";
 import useAuthStore from "../store/authStore";
 import KakaoLoginButton from "./KakaoLogin";
@@ -17,6 +17,7 @@ function LoginForm2() {
 
     // 이메일 입력 핸들러
     const handleEmail = (e) => {
+        console.log(e);
         const value = e.target.value;
         setEmail(value);
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -34,11 +35,14 @@ function LoginForm2() {
     // 로그인 버튼 클릭 핸들러
     const onClickConfirmButton = (e) => {
         e.preventDefault();  // 폼의 기본 동작 방지 (페이지 새로고침 방지)
-        const user = User.find((user) => user.email === email && user.password === pw);
 
-        if (user) {
+        const currentUser = users.find((user) => user.email === email && user.password === pw);
+
+
+
+        if (currentUser) {
             alert('로그인에 성공했습니다.');
-            login();
+            login(currentUser);
             // console.log("로그인 성공")
             navigate('/');
         } else {
@@ -52,7 +56,7 @@ function LoginForm2() {
     }, [emailValid, pwValid]);
 
     return (
-        <div id="main" className="flex flex-col h-[850px] mx-[400px] my-[100px]">
+        <div id="main" className="flex flex-col h-[850px] mx-[400px] my-[100px] ">
             <h2 id="login__title" className="mt-[100px] mb-[60px] text-2xl font-bold">로그인</h2>
 
             <form className="flex flex-col" onSubmit={onClickConfirmButton}>

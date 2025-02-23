@@ -3,7 +3,7 @@ import ThinkSync from "../assets/images/thinksync.png";
 
 const AboutUsContent = ()=>{
     return(
-        <div className="min-h-[600px] text-center relative mx-auto">
+        <div className="min-h-[600px] my-24 text-center relative mx-auto">
             <h1 className="font-medium text-3xl my-10">&quot;Connect, Synchronize&quot;</h1>
             <img src={aboutUsImg} alt="AboutUsImg" className="brightness-75 max-w-[1280px] mx-auto rounded-lg" />
             <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 mt-6 text-2xl text-gray-100 font-extrabold leading-relaxed ">

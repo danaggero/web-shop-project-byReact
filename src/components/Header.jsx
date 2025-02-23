@@ -1,11 +1,16 @@
 import {Link} from "react-router-dom"
 import { useNavigate } from "react-router-dom";
 import useAuthStore from "../store/authStore";
+import SideBar from "./SideBar";
+import { useState } from "react";
+
 
 function Header() {
 
   const Navigate = useNavigate();
   const {isLoggedIn, logout, login} = useAuthStore();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
   console.log('현재 로그인 상태:', isLoggedIn);
 
   return (
@@ -17,41 +22,68 @@ function Header() {
       <div id="logo" className="text-[white] text-3xl font-extrabold">
       <Link to={"/"}>ECLO</Link>
       </div>
-      <ul className="text-[white] flex list-none gap-5">
-        <li className="flex items-center gap-1">
-          <span className="material-icons">shopping_cart</span>
-          <Link to={"/cart"}>장바구니</Link>
-        </li>
-        <li className="flex items-center gap-1">
-          <span className="material-icons">account_circle</span>
-          <Link to={"/mypage"}>마이페이지</Link>
-        </li>
-        <li className="flex items-center gap-1">
-          <span className="material-icons">assignment</span>
-          <Link to={"/Register"}>회원가입</Link>
-        </li>
-        <li className="flex items-center gap-1">
-          {
-            isLoggedIn ? 
-            <>
-            <span className="material-icons">logout</span>
-            <div className="cursor-pointer" onClick={()=>{logout(); alert('로그아웃 되었습니다.')}}>로그아웃</div>
-            </>
+      {
+        isLoggedIn ?
+          <ul className="text-[white] flex list-none gap-5">
+            <li className="flex items-center gap-1">
+              <span className="material-icons">shopping_cart</span>
+              <Link to={"/cart"}>장바구니</Link>
+            </li>
+            <li className="flex items-center gap-1">
+              <span className="material-icons">account_circle</span>
+              <Link to={"/mypage"}>마이페이지</Link>
+            </li>
+            <li className="flex items-center gap-1">
+              <span className="material-icons">assignment</span>
+              <Link to={"/Register"}>회원가입</Link>
+            </li>
+            <li className="flex items-center gap-1">
+              {
+                isLoggedIn ? 
+                <>
+                <span className="material-icons">logout</span>
+                <div className="cursor-pointer" onClick={()=>{logout(); alert('로그아웃 되었습니다.')}}>로그아웃</div>
+                </>
+                :
+                <>
+                <span className="material-icons">login</span>
+                <Link to={"/login"}>로그인</Link>
+                </>
+              }
+            </li>
+          </ul>
             :
-            <>
-            <span className="material-icons">login</span>
-            <Link to={"/login"}>로그인</Link>
-            </>
-          }
-        </li>
-      </ul>
-    </div>
+            <ul className="text-[white] flex list-none gap-5">
 
+            <li className="flex items-center gap-1">
+              <span className="material-icons">assignment</span>
+              <Link to={"/Register"}>회원가입</Link>
+            </li>
+            <li className="flex items-center gap-1">
+              {
+                isLoggedIn ? 
+                <>
+                <span className="material-icons">logout</span>
+                <div className="cursor-pointer" onClick={()=>{logout(); alert('로그아웃 되었습니다.')}}>로그아웃</div>
+                </>
+                :
+                <>
+                <span className="material-icons">login</span>
+                <Link to={"/login"}>로그인</Link>
+                </>
+              }
+            </li>
+          </ul>     
+      }
+      </div>
+      
     {/* Header-middle */}
     <div id="header-middle" className="flex bg-white justify-between py-5 items-center text-[#708090]">
       <div id="nav" className="flex items-center">
-        <button className="ml-5 bg-transparent w-10 h-10 bg-[url('./assets/icons/menu.svg')] bg-no-repeat bg-cover cursor-pointer">
-        </button> 
+        <button onClick={() => setIsSidebarOpen(true)} className="ml-5 bg-transparent w-10 h-10 m-auto "><svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 0 24 24" width="48px" fill="#708090"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+        </button>
+
+ 
         <ul className="flex items-center gap-10 px-10">
           <li className="cursor-pointer font-[650] inline-block" onClick={() => Navigate("/")}>Home</li>
           <li className="cursor-pointer font-[650] inline-block" onClick={() => Navigate("/NotFound")}>Magazine</li>
@@ -70,6 +102,7 @@ function Header() {
           search
         </span>
       </div>
+      <SideBar isSidebarOpen={isSidebarOpen} setIsSidebarOpen={setIsSidebarOpen} />
     </div>
       
     {/* Header-bottom */}
